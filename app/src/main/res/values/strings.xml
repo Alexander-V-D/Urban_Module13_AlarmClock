@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Urban_Module13_AlarmClock</string>
+    <string name="toolbar_title">Мой будильник</string>
+    <string name="set_alarm_clock">Установить будильник</string>
+    <string name="turnoff_alarm_clock">Отключить будильник</string>
+</resources>
