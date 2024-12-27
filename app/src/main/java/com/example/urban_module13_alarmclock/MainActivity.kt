@@ -6,6 +6,8 @@ import android.app.PendingIntent
 import android.content.Intent
 import android.icu.util.Calendar
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.AdapterView
 import android.widget.Button
 import android.widget.ListView
@@ -117,5 +119,17 @@ class MainActivity : AppCompatActivity() {
         val listAdapter = ListAdapter(this, alarmClocksList)
         alarmClocksLV.adapter = listAdapter
         listAdapter.notifyDataSetChanged()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.exit_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId) {
+            R.id.menuExit -> finishAffinity()
+        }
+        return true
     }
 }

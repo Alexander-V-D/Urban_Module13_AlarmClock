@@ -1,6 +1,8 @@
 package com.example.urban_module13_alarmclock
 
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -24,5 +26,17 @@ class AlarmActivity : AppCompatActivity() {
             finish()
             exitProcess(0)
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.exit_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId) {
+            R.id.menuExit -> finishAffinity()
+        }
+        return true
     }
 }

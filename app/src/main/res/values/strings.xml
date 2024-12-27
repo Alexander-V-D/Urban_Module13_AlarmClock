@@ -3,4 +3,5 @@
     <string name="toolbar_title">Мой будильник</string>
     <string name="set_alarm_clock">Установить будильник</string>
     <string name="turnoff_alarm_clock">Отключить будильник</string>
+    <string name="exit">Выйти</string>
 </resources>
